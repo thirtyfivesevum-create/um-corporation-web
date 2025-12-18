@@ -2,11 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>U/M Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: white;
+    }
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: url("images/kemetian-hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .content {
+      position: relative;
+      max-width: 900px;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: #ddd;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>U/M Corporation</h1>
-  <p>Infrastructure. Energy. Intelligence.</p>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Ancient Intelligence. Modern Infrastructure.</h1>
+      <p>
+        U/M Corporation revives proven architectural and energetic principles
+        from ancient civilizations and retrofits them with advanced materials,
+        integrated energy systems, and modern infrastructure intelligence.
+      </p>
+    </div>
+  </div>
+
+  <!-- EXPLANATION -->
+  <section>
+    <h2>The Kemetian Structure</h2>
+    <p>
+      Ancient builders mastered geometry, load distribution, passive energy capture,
+      and earth-coupled foundations long before modern instrumentation existed.
+      U/M Corporation studies these systems and enhances them using today’s
+      computational modeling, materials science, and renewable technologies.
+    </p>
+    <p>
+      The result is resilient, secure residential and commercial structures —
+      energized by integrated foundation grids and intelligent microgeneration
+      networks designed for modern needs.
+    </p>
+  </section>
+
 </body>
 </html>
