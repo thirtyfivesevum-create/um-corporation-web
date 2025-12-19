@@ -2,201 +2,258 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>U/M Corporation</title>
-  <meta name="description" content="U/M Corporation — Advanced infrastructure, energy-integrated foundations, security systems, and next-generation construction." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>U/M Corporation | Integrated Structures, Energy & Security</title>
+  <meta name="description" content="U/M Corporation builds advanced foundations that generate energy, integrate security, and power the future." />
   <style>
     :root {
       --bg: #0b0f14;
-      --panel: #111826;
-      --accent: #3b82f6;
-      --muted: #94a3b8;
-      --text: #e5e7eb;
-      --card: #0f172a;
-      --border: #1f2937;
+      --panel: #121826;
+      --accent: #4fd1c5;
+      --accent-2: #63b3ed;
+      --text: #e6edf3;
+      --muted: #9aa4b2;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: radial-gradient(1200px 600px at 20% -10%, #0b1220, transparent), var(--bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(180deg, #0b0f14 0%, #0e1320 100%);
       color: var(--text);
-      line-height: 1.6;
     }
     a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
-    header {
-      position: sticky; top: 0; z-index: 10;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(11,15,20,.85), rgba(11,15,20,.6));
-      border-bottom: 1px solid var(--border);
-    }
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .brand { font-weight: 800; letter-spacing: .4px; }
-    .nav a { margin-left: 18px; color: var(--muted); }
-    .nav a:hover { color: var(--text); }.hero {
-  padding: 72px 0 48px;
-  display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px;
+    img { max-width: 100%; display: block; }/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(11,15,20,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.cta {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #001014;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
   align-items: center;
 }
-.badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 6px 12px; border-radius: 999px;
-  background: rgba(59,130,246,.12); color: #bfdbfe;
-  border: 1px solid rgba(59,130,246,.25);
-  font-size: 13px; font-weight: 500;
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  margin: 0 0 16px;
 }
-h1 { font-size: clamp(34px, 5vw, 56px); line-height: 1.05; margin: 14px 0; }
-.lead { color: var(--muted); font-size: 18px; max-width: 56ch; }
-.cta {
-  display: flex; gap: 14px; margin-top: 22px;
+.hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
 }
-.btn {
-  padding: 12px 18px; border-radius: 12px; font-weight: 600;
-  border: 1px solid var(--border); background: #0b1220;
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
-.btn.primary { background: linear-gradient(180deg, #3b82f6, #2563eb); border-color: #1d4ed8; }
-.panel {
-  background: linear-gradient(180deg, rgba(15,23,42,.8), rgba(15,23,42,.6));
-  border: 1px solid var(--border); border-radius: 20px; padding: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+.secondary {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text);
+}
+.hero-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
-.section { padding: 56px 0; }
-.section h2 { font-size: 28px; margin-bottom: 10px; }
-.section p { color: var(--muted); }
+/* Sections */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.section-sub {
+  color: var(--muted);
+  max-width: 700px;
+  margin-bottom: 40px;
+}
 
-.grid { display: grid; gap: 18px; }
-.grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-
+/* Feature grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
 .card {
-  background: linear-gradient(180deg, #0b1220, #0b1220);
-  border: 1px solid var(--border); border-radius: 18px; padding: 18px;
+  background: linear-gradient(180deg, #121826, #0f1424);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card h3 { margin: 6px 0 8px; }
-.icon {
-  width: 42px; height: 42px; border-radius: 12px;
-  display: grid; place-items: center;
-  background: rgba(59,130,246,.15); border: 1px solid rgba(59,130,246,.25);
-  color: #bfdbfe; font-weight: 800;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+.card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.card-body {
+  padding: 20px;
+}
+.card-body h3 {
+  margin-top: 0;
+}
+.card-body p {
+  color: var(--muted);
 }
 
-.media {
-  border-radius: 16px; overflow: hidden; border: 1px solid var(--border);
-  background: #020617;
+/* Split section */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
-.media .placeholder {
-  height: 320px; display: grid; place-items: center; color: var(--muted);
-  background: radial-gradient(600px 200px at 50% -20%, rgba(59,130,246,.15), transparent);
+.panel {
+  background: linear-gradient(180deg, #121826, #0f1424);
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
-footer { border-top: 1px solid var(--border); color: var(--muted); }
-footer .container { display: flex; justify-content: space-between; align-items: center; }
+/* Footer */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 40px 20px;
+  color: var(--muted);
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
 
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .grid.cols-3 { grid-template-columns: 1fr; }
+  .hero { grid-template-columns: 1fr; padding-top: 40px; }
+  .split { grid-template-columns: 1fr; }
 }
 
   </style>
 </head>
-<body>
-  <header>
-    <div class="container nav">
+<body>  <header>
+    <div class="nav">
       <div class="brand">U/M Corporation</div>
-      <nav>
-        <a href="#solutions">Solutions</a>
-        <a href="#structure">Kemetian Structure</a>
-        <a href="#security">Security</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <a href="#contact" class="cta">Request Consultation</a>
     </div>
-  </header>  <main class="container">
-    <section class="hero">
-      <div>
-        <span class="badge">Integrated Infrastructure & Energy</span>
-        <h1>Building Power Into the Foundation of the Future</h1>
-        <p class="lead">U/M Corporation designs and deploys advanced structures where the foundation itself generates energy, supports on-site microgrids, and integrates intelligent security systems from the ground up.</p>
-        <div class="cta">
-          <a class="btn primary" href="#contact">Request Consultation</a>
-          <a class="btn" href="#solutions">Explore Capabilities</a>
-        </div>
+  </header>  <!-- HERO SECTION -->  <div class="hero">
+    <div>
+      <h1>Foundations That Power, Protect, and Endure</h1>
+      <p>
+        U/M Corporation pioneers integrated structural systems where the foundation itself generates electricity, supports advanced security, and sustains modern living.
+      </p>
+      <div class="hero-actions">
+        <a href="#solutions" class="cta">Explore Our Systems</a>
+        <a href="#about" class="secondary">About U/M</a>
       </div>
-      <div class="panel media">
-        <div class="placeholder">Hero Image Placeholder<br/>Add your photo here</div>
-      </div>
-    </section><section id="solutions" class="section">
-  <h2>Core Capabilities</h2>
-  <p>End-to-end delivery across structure, energy, and security.</p>
-  <div class="grid cols-3">
-    <div class="card">
-      <div class="icon">F</div>
+    </div>
+    <div class="hero-image">
+      <!-- HERO IMAGE: use your portrait or leadership image here -->
+      <img src="images/hero-founder.jpg" alt="U/M Corporation Leadership" />
+    </div>
+  </div>  <!-- SOLUTIONS GRID -->  <section id="solutions">
+    <h2 class="section-title">Integrated Solutions</h2>
+    <p class="section-sub">
+      Each system is designed to work together—structure, energy, and security—forming a single intelligent foundation.
+    </p><div class="grid">
+  <div class="card">
+    <!-- FOUNDATION + ENERGY IMAGE -->
+    <img src="images/foundation-energy.jpg" alt="Energy-generating foundation" />
+    <div class="card-body">
       <h3>Energy-Producing Foundations</h3>
-      <p>Advanced earth-compound materials and embedded systems convert structural mass into continuous electrical generation for residential and commercial use.</p>
-    </div>
-    <div class="card">
-      <div class="icon">G</div>
-      <h3>On‑Site Microgrids</h3>
-      <p>Foundation‑integrated generation feeds localized microgrids with storage, reducing dependency on external utilities.</p>
-    </div>
-    <div class="card">
-      <div class="icon">S</div>
-      <h3>Intelligent Security</h3>
-      <p>Autonomous aerial and perimeter systems designed into the structure—monitoring, response, and resilience by design.</p>
+      <p>
+        Advanced earth-compound and structural materials convert environmental forces into usable power, feeding on-site microgrids and reducing grid dependence.
+      </p>
     </div>
   </div>
-</section>
 
-<section id="structure" class="section">
-  <div class="grid" style="grid-template-columns: 1.1fr .9fr;">
-    <div>
-      <h2>The Kemetian Structure</h2>
-      <p>Our proprietary structural division focuses on foundations that do more than support—they produce. By merging material science with energy engineering, each build becomes a power asset.</p>
-      <ul>
-        <li>Self‑sustaining energy output</li>
-        <li>Long‑term durability and resilience</li>
-        <li>Scalable from homes to industrial sites</li>
-      </ul>
-    </div>
-    <div class="media">
-      <div class="placeholder">Foundation + Energy Visualization</div>
+  <div class="card">
+    <!-- SECURITY / DRONES IMAGE -->
+    <img src="images/security-drones.jpg" alt="Integrated aerial and perimeter security" />
+    <div class="card-body">
+      <h3>Integrated Security Architecture</h3>
+      <p>
+        Foundation-anchored security systems, autonomous surveillance, and aerial monitoring designed into the structure from day one.
+      </p>
     </div>
   </div>
-</section>
 
-<section id="security" class="section">
-  <div class="grid" style="grid-template-columns: .9fr 1.1fr;">
-    <div class="media">
-      <div class="placeholder">Autonomous Security Visualization</div>
-    </div>
-    <div>
-      <h2>Security Built In</h2>
-      <p>Security is not an add‑on. It is embedded—powered directly by the structure’s own energy systems, ensuring uptime even during grid failures.</p>
-      <ul>
-        <li>Drone‑based monitoring</li>
-        <li>Perimeter intelligence</li>
-        <li>Independent power resilience</li>
-      </ul>
+  <div class="card">
+    <!-- FUTURE INFRASTRUCTURE IMAGE -->
+    <img src="images/future-infrastructure.jpg" alt="Future-ready infrastructure" />
+    <div class="card-body">
+      <h3>Future-Ready Infrastructure</h3>
+      <p>
+        Modular, scalable systems engineered for expansion—supporting residential, commercial, and strategic facilities.
+      </p>
     </div>
   </div>
-</section>
+</div>
 
-<section id="contact" class="section panel">
-  <h2>Start a Project</h2>
-  <p>Discuss feasibility, deployment, and timelines with our executive team.</p>
-  <p><strong>Email:</strong> executive@umcorporation.com</p>
-</section>
-
-  </main>  <footer>
-    <div class="container">
-      <p>© 2025 U/M Corporation. All rights reserved.</p>
-      <p>Designed for clarity, resilience, and scale.</p>
+  </section>  <!-- SPLIT DETAIL SECTION -->  <section>
+    <div class="split">
+      <div class="panel">
+        <h2>The Kemetian Structure</h2>
+        <p class="section-sub">
+          A proprietary division of U/M Corporation focused on advanced foundations and self-sustaining energy systems.
+        </p>
+        <p>
+          By merging structural engineering with power generation and security, The Kemetian Structure transforms the foundation into an active asset—one that produces energy, reinforces safety, and supports long-term resilience.
+        </p>
+      </div>
+      <div class="hero-image">
+        <!-- DETAILED FOUNDATION IMAGE -->
+        <img src="images/kemetian-structure.jpg" alt="The Kemetian Structure system visualization" />
+      </div>
     </div>
-  </footer>
-</body>
+  </section>  <!-- CONTACT / CTA -->  <section id="contact">
+    <h2 class="section-title">Build the Future From the Ground Up</h2>
+    <p class="section-sub">
+      Partner with U/M Corporation to deploy next-generation structural, energy, and security systems.
+    </p>
+    <a href="mailto:executive@umcorporation.com" class="cta">Contact Executive Team</a>
+  </section>  <footer>
+    <div class="footer-inner">
+      <div>© 2025 U/M Corporation. All rights reserved.</div>
+      <div>Integrated Structures • Energy Systems • Security Architecture</div>
+    </div>
+  </footer></body>
 </html>
